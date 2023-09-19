@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Convite para célula</title>
+		<link rel="stylesheet" href="convite.css" />
+	</head>
+	<body>
+		<section class="corpo-convite">
+			<div class="cabecalho">
+				<h1 class="titulo">CÉLULA</h1>
+				<span class="descricao"
+					>Temos um convite especial para você, mas antes de revelarmos
+					precisamos que responda algumas perguntinhas.</span
+				>
+			</div>
+
+			<div class="container">
+				<!-- Pergunta -->
+				<div class="pergunta">
+					<label class="titulo-pergunta" for="resposta-pergunta"
+						>Em algum momento da sua vida você já se sentiu sozinho e que
+						ninguém te via ou conhecia, mesmo estando no meio de pessoas?</label
+					>
+					<div class="check">
+						<input type="checkbox" class="check__check resposta-pergunta" />
+						<div class="check__indicator"></div>
+					</div>
+				</div>
+
+				<!-- Vídeo que deve ser apresentado após responder a pergunta -->
+				<div class="video-pos-pergunta dont-display">
+					<video controls>
+						<source type="video/mp4" />
+					</video>
+				</div>
+
+				<!-- De facto convite -->
+				<div class="convite dont-display">
+					<div class="cabecalho">
+						<h1>Olá, filho!</h1>
+					</div>
+
+					<br />
+					<p>
+						<br />É com alegria que te convidamos para participar da nossa
+						Célula Colo de Deus, um momento especial de comunhão, aprendizado e
+						Partilha, que acontecerá todas as quintas-feiras. Estamos ansiosos
+						para te encontrar, crescermos juntos espiritualmente e fortalecermos
+						nossa fé.
+						<br />
+						<br />Data: 28/09/2023; <br />Horário: 19h; <br />Endereço: Rua 160,
+						Quadra 271, Vila Bené. <br />
+						<br />Não importa o que você viveu até aqui, todos são bem-vindos
+						para se juntar a nós e experimentar o amor e a graça de Deus em
+						nossas vidas. <br />
+					</p>
+					<br />
+
+					<div class="rodape">
+						<h1>Com amor e expectativa,</h1>
+						<p>
+							Talisson Cleofas Pereira dos Santos <br />Silvio Marques Seixas
+							Filho
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="rodape-convite">
+			<button class="botao-avancar" onclick="avancarSlide()">→</button>
+		</footer>
+
+		<script defer src="convite.js" type="text/javascript"></script>
+	</body>
+</html>
