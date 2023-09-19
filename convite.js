@@ -43,6 +43,7 @@ init();
 
 function alterarPergunta(pergunta) {
 	tituloPergunta.innerText = pergunta.titulo;
+	respostaPergunta.checked = false;
 	alterarOrigemVideo(pergunta.video);
 }
 
