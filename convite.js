@@ -66,22 +66,28 @@ function esconderElemento(elemento) {
 function revelarElemento(elemento) {
 	return elemento.classList.remove("dont-display");
 }
+function assistirVideo() {
+	videoPosPergunta.play();
+	videoPosPergunta.addEventListener("ended", function() {
+			avancarSlide();
+	});
+}
 
 function avancarSlide() {
 	videoPosPergunta.pause();
 
 	if (perguntaAtual == perguntas.length - 1 && isVideoSendoApresentado()) {
-		esconderElemento(elementoPergunta);
-		esconderElemento(containerVideoPosPergunta);
-		esconderElemento(botaoAvancar);
+			esconderElemento(elementoPergunta);
+			esconderElemento(containerVideoPosPergunta);
+			esconderElemento(botaoAvancar);
 
-		return revelarConvite();
+			return revelarConvite();
 	}
 
 	if (!isVideoSendoApresentado()) {
-		esconderElemento(elementoPergunta);
-		revelarElemento(containerVideoPosPergunta);
-		return videoPosPergunta.play();
+			esconderElemento(elementoPergunta);
+			revelarElemento(containerVideoPosPergunta);
+			return assistirVideo(); // Inicia o vídeo e define o evento "ended"
 	}
 
 	esconderElemento(containerVideoPosPergunta);
