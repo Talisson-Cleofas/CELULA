@@ -68,11 +68,11 @@ function revelarElemento(elemento) {
 	return elemento.classList.remove("dont-display");
 }
 function assistirVideo() {
-    videoPosPergunta.play();
-    videoPosPergunta.addEventListener("ended", function() {
-        perguntaAtual++; // Avança para a próxima pergunta
-        avancarPergunta(); // Chama a função para avançar para a próxima pergunta
-    });
+	videoPosPergunta.play();
+	videoPosPergunta.addEventListener("ended", function() {
+			// Não avança automaticamente para a próxima pergunta
+			// O usuário deve clicar no botão de avanço para passar para a próxima pergunta
+	});
 }
 
 
