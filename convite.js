@@ -68,11 +68,13 @@ function revelarElemento(elemento) {
 	return elemento.classList.remove("dont-display");
 }
 function assistirVideo() {
-	videoPosPergunta.play();
-	videoPosPergunta.addEventListener("ended", function() {
-			avancarSlide();
-	});
+    videoPosPergunta.play();
+    videoPosPergunta.addEventListener("ended", function() {
+        perguntaAtual++; // Avança para a próxima pergunta
+        avancarPergunta(); // Chama a função para avançar para a próxima pergunta
+    });
 }
+
 
 function avancarSlide() {
 	videoPosPergunta.pause();
